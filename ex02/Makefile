@@ -1,15 +1,15 @@
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 CC = c++
 FLAGS = -Wall -Wextra -Werror
-NAME = ClapTrap
+NAME = FragTrap
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $^ -o $@
 
-%.o: %.cpp ClapTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
