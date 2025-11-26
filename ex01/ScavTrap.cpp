@@ -31,3 +31,14 @@ void ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap in Gate keeper mode.\n";
 }
+
+ScavTrap::ScavTrap(const ScavTrap &obj)
+{
+	*this = obj;
+}
+
+ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
+{
+	(void)obj;
+	return (*this);
+}

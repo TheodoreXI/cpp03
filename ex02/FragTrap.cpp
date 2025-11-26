@@ -20,3 +20,14 @@ void FragTrap::highFivesGuys(void)
 {
 	std::cout << "FragTrap " << name << " asks for a positive high five.\n";
 }
+
+FragTrap::FragTrap(const FragTrap &obj)
+{
+	*this = obj;
+}
+
+FragTrap &FragTrap::operator=(const FragTrap &obj)
+{
+	(void)obj;
+	return (*this);
+}

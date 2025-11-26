@@ -7,5 +7,4 @@ int main()
 	a.attack(t);
 	a.takeDamage(5);
 	a.beRepaired(3);
-
 }
