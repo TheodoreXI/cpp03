@@ -1,7 +1,8 @@
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
+DEPS = $(OBJS:.o=.d)
 CC = c++
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -MMD -std=c++98
 NAME = ScavTrap
 
 all: $(NAME)
@@ -9,13 +10,15 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $^ -o $@
 
-%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
+%.o: %.cpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJS)
+	rm -rf $(OBJS) $(DEPS)
 
 fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
+
+-include $(DEPS)
