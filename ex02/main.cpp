@@ -3,6 +3,7 @@
 
 int main()
 {
+	
 	std::string t = "Oscar";
 	FragTrap l("lFrag");
 	ScavTrap m("mScav");

@@ -8,5 +8,4 @@ int main()
 	l.takeDamage(5);
 	l.beRepaired(3);
 	l.guardGate();
-
 }

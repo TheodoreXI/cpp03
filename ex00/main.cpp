@@ -4,7 +4,7 @@ int main()
 {
 	ClapTrap a;
 	std::string t = "Oscar";
-	a.attack(t);
 	a.takeDamage(5);
+	a.attack(t);
 	a.beRepaired(3);
 }

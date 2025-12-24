@@ -39,6 +39,9 @@ ScavTrap::ScavTrap(const ScavTrap &obj)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &obj)
 {
-	(void)obj;
+	this->name = obj.name;
+	this->attack_damage = obj.attack_damage;
+	this->hit_point = obj.hit_point;
+	this->energy_point = obj.energy_point;
 	return (*this);
 }

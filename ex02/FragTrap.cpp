@@ -28,6 +28,10 @@ FragTrap::FragTrap(const FragTrap &obj)
 
 FragTrap &FragTrap::operator=(const FragTrap &obj)
 {
-	(void)obj;
+	this->name = obj.name;
+	this->attack_damage = obj.attack_damage;
+	this->hit_point = obj.hit_point;
+	this->energy_point = obj.energy_point;
 	return (*this);
 }
+
